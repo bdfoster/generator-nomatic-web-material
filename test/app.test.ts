@@ -5,7 +5,7 @@ import * as yeoman from 'yeoman-test';
 
 describe('app', () => {
     before(() => {
-        return yeoman.run(path.join(__dirname, '../src/app')).withPrompts({someAnswer: true});
+        return yeoman.run(path.join(__dirname, '../generators/app')).withPrompts({someAnswer: true});
     });
 
     it('creates files', () => {

@@ -2,7 +2,7 @@ import * as chalk from 'chalk';
 import * as Generator from 'yeoman-generator';
 import * as yosay from 'yosay';
 
-export default class AppGenerator extends Generator {
+class AppGenerator extends Generator {
     public props: object;
 
     public prompting() {
@@ -40,3 +40,7 @@ export default class AppGenerator extends Generator {
         this.installDependencies();
     }
 }
+
+module.exports = function (args, options) {
+    return new AppGenerator(args, options);
+};
