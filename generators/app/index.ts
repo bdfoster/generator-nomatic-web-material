@@ -16,10 +16,10 @@ class AppGenerator extends Generator {
 
         const prompts = [
             {
-                type: 'confirm',
-                name: 'someAnswer',
-                message: 'Would you like to enable this option?',
-                default: true
+                type: 'input',
+                name: 'name',
+                message: 'Your project name',
+                default: this.appname
             }
         ];
 
@@ -30,9 +30,10 @@ class AppGenerator extends Generator {
     }
 
     writing() {
-        this.fs.copy(
-            this.templatePath('dummyfile.txt'),
-            this.destinationPath('dummyfile.txt')
+        this.fs.copyTpl(
+            this.templatePath('package.tpl.json'),
+            this.destinationPath('package.json'),
+            this.props
         );
     }
 
