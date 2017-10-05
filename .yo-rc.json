@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Brian Foster",
+      "authorEmail": "bdfoster89@gmail.com",
+      "authorUrl": "https://bdfoster.github.io"
+    }
+  }
+}
